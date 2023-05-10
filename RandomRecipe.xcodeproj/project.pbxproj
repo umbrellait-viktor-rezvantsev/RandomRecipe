@@ -10,7 +10,6 @@
 		925FC16D2A0B8F390047E571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FC16C2A0B8F390047E571 /* AppDelegate.swift */; };
 		925FC16F2A0B8F390047E571 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FC16E2A0B8F390047E571 /* SceneDelegate.swift */; };
 		925FC1712A0B8F390047E571 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FC1702A0B8F390047E571 /* ViewController.swift */; };
-		925FC1742A0B8F390047E571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925FC1722A0B8F390047E571 /* Main.storyboard */; };
 		925FC1762A0B8F3A0047E571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925FC1752A0B8F3A0047E571 /* Assets.xcassets */; };
 		925FC1792A0B8F3A0047E571 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925FC1772A0B8F3A0047E571 /* LaunchScreen.storyboard */; };
 		FE80837B954E208A343096BD /* Pods_RandomRecipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E5F6726F3BA92205762519 /* Pods_RandomRecipe.framework */; };
@@ -23,10 +22,10 @@
 		925FC16C2A0B8F390047E571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925FC16E2A0B8F390047E571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		925FC1702A0B8F390047E571 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		925FC1732A0B8F390047E571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		925FC1752A0B8F3A0047E571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925FC1782A0B8F3A0047E571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		925FC17A2A0B8F3A0047E571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		925FC1862A0BAC3E0047E571 /* Credentials.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Credentials.xcconfig; sourceTree = "<group>"; };
 		E168B74EC100E21635D6B7A6 /* Pods-RandomRecipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomRecipe.release.xcconfig"; path = "Target Support Files/Pods-RandomRecipe/Pods-RandomRecipe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,14 +47,14 @@
 				02AE53BFE45D69B29EF3A8FE /* Pods-RandomRecipe.debug.xcconfig */,
 				E168B74EC100E21635D6B7A6 /* Pods-RandomRecipe.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		925FC1602A0B8F390047E571 = {
 			isa = PBXGroup;
 			children = (
-				925FC16B2A0B8F390047E571 /* RandomRecipe */,
+				925FC1852A0BABFB0047E571 /* Resources */,
+				925FC1802A0BA6390047E571 /* Source */,
 				925FC16A2A0B8F390047E571 /* Products */,
 				3F8E27FEC95E78CC6DE45FFE /* Pods */,
 				9C4992A2B43C04C8BC572C48 /* Frameworks */,
@@ -70,18 +69,57 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		925FC16B2A0B8F390047E571 /* RandomRecipe */ = {
+		925FC1802A0BA6390047E571 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				925FC1832A0BAB560047E571 /* MainModule */,
+				925FC1822A0BAA7D0047E571 /* Network */,
+				925FC1812A0BA6440047E571 /* Application */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		925FC1812A0BA6440047E571 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				925FC16C2A0B8F390047E571 /* AppDelegate.swift */,
 				925FC16E2A0B8F390047E571 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		925FC1822A0BAA7D0047E571 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		925FC1832A0BAB560047E571 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				925FC1842A0BAB5E0047E571 /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		925FC1842A0BAB5E0047E571 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				925FC1702A0B8F390047E571 /* ViewController.swift */,
-				925FC1722A0B8F390047E571 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		925FC1852A0BABFB0047E571 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				925FC1752A0B8F3A0047E571 /* Assets.xcassets */,
 				925FC1772A0B8F3A0047E571 /* LaunchScreen.storyboard */,
 				925FC17A2A0B8F3A0047E571 /* Info.plist */,
+				925FC1862A0BAC3E0047E571 /* Credentials.xcconfig */,
 			);
-			path = RandomRecipe;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9C4992A2B43C04C8BC572C48 /* Frameworks */ = {
@@ -154,7 +192,6 @@
 			files = (
 				925FC1792A0B8F3A0047E571 /* LaunchScreen.storyboard in Resources */,
 				925FC1762A0B8F3A0047E571 /* Assets.xcassets in Resources */,
-				925FC1742A0B8F390047E571 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,14 +253,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		925FC1722A0B8F390047E571 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				925FC1732A0B8F390047E571 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		925FC1772A0B8F3A0047E571 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -357,24 +386,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 65QJRJJ9DM;
+				DEVELOPMENT_TEAM = C2346K5398;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomRecipe/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Demo Recipes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = geroid.RandomRecipe;
+				PRODUCT_BUNDLE_IDENTIFIER = "umbrellait-viktor-rezvantsev.RandomRecipe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -386,24 +418,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 65QJRJJ9DM;
+				DEVELOPMENT_TEAM = C2346K5398;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomRecipe/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Demo Recipes";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = geroid.RandomRecipe;
+				PRODUCT_BUNDLE_IDENTIFIER = "umbrellait-viktor-rezvantsev.RandomRecipe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
